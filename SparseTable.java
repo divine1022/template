@@ -1,7 +1,6 @@
 class SparseTable {
-    int n;
-    int[][] f;
-    int[] log2;
+    private final int[][] f;
+    private final int[] log2;
 
     private int fun(int x, int y) {
         // TODO
@@ -9,7 +8,7 @@ class SparseTable {
     }
 
     public SparseTable(int[] a) {
-        n = a.length;
+        int n = a.length;
         log2 = new int[n + 1];
         for (int i = 2; i <= n; i++) {
             log2[i] = log2[i / 2] + 1;
